@@ -46,7 +46,7 @@ app.post('/signup', async (req, res) => {
 
 7. Create a login route
 
-
+```js
 const jwt = require('jsonwebtoken');
 app.post('/login', async (req, res) => {
     const user = await User.findOne({ username: req.body.username });
