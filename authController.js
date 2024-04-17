@@ -12,12 +12,12 @@ router.post('/signup', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-  const user = await User.findOne({ username: req.body.username });
-  if (!user || !await bcrypt.compare(req.body.password, user.password)) {
-    return res.sendStatus(401);
-  }
-  const token = jwt.sign({ _id: user._id }, 'secret_key');
-  res.send({ token });
+    const user = await User.findOne({ username: req.body.username });
+    if (!user || !await bcrypt.compare(req.body.password, user.password)) {
+        return res.sendStatus(401);
+    }
+    const token = jwt.sign({ _id: user._id }, process.env.SECRET_KEY);
+    res.send({ token });
 });
 
 module.exports = router;
