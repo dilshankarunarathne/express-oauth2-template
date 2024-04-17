@@ -4,7 +4,7 @@ module.exports = (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
   if (!token) return res.sendStatus(401);
-  jwt.verify(token, 'secret_key', (err, user) => {  // TODO
+  jwt.verify(token, 'secret_key', (err, user) => {  // TODO load from env
     if (err) return res.sendStatus(403);
     req.user = user;
     next();
