@@ -61,4 +61,14 @@ app.post('/login', async (req, res) => {
 8. Generate a JWT token on successful login
 This is done in the login route above
 
-
+9. Create a middleware to protect routes
+const authMiddleware = (req, res, next) => {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+    if (!token) return res.sendStatus(401);
+    jwt.verify(token, 'secret_key', (err, user) => {
+        if (err) return res.sendStatus(403);
+        req.user = user;
+        next();
+    });
+};
