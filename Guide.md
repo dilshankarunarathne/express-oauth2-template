@@ -44,3 +44,13 @@ app.post('/signup', async (req, res) => {
 ```
 
 
+// 7. Create a login route
+const jwt = require('jsonwebtoken');
+app.post('/login', async (req, res) => {
+    const user = await User.findOne({ username: req.body.username });
+    if (!user || !await bcrypt.compare(req.body.password, user.password)) {
+        return res.sendStatus(401);
+    }
+    const token = jwt.sign({ _id: user._id }, 'secret_key');
+    res.send({ token });
+});
