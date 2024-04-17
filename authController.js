@@ -5,8 +5,14 @@ const jwt = require('jsonwebtoken');
 const User = require('./User');
 
 router.post('/signup', async (req, res) => {
-  const hashedPassword = await bcrypt.hash(req.body.password, 10);
-  const user = new User({ username: req.body.username, password: hashedPassword });
+  const { username, password } = req.body;
+  
+  if (!username || !password) {
+    return res.status(400).send('Username and password are required');
+  }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+  const user = new User({ username, password: hashedPassword });
   await user.save();
   res.sendStatus(201);
 });
