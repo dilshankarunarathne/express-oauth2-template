@@ -14,6 +14,7 @@ mongoose.connect(
 ```
 
 4. Create a User model with Mongoose
+```js
 const UserSchema = new mongoose.Schema({
     username: String,
     password: String,
