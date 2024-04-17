@@ -62,6 +62,7 @@ app.post('/login', async (req, res) => {
 This is done in the login route above
 
 9. Create a middleware to protect routes
+
 const authMiddleware = (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
