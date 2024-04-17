@@ -1,0 +1,12 @@
+{
+  "name": "express-oauth2-template",
+  "version": "1.0.0",
+  "description": "This is a template for an Express.js REST API application with MongoDB. It uses OAuth2 for authentication and authorization.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
