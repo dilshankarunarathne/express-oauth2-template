@@ -59,3 +59,5 @@ app.post('/login', async (req, res) => {
 ```
 
 
+8. Generate a JWT token on successful login
+// This is done in the login route above
