@@ -22,5 +22,8 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model('User', UserSchema);
 ```
 
-
+5. Set up Express.js server
+const express = require('express');
+const app = express();
+app.use(express.json());
 
