@@ -76,5 +76,8 @@ const authMiddleware = (req, res, next) => {
 };
 ```
 
-
+10. Create a protected route
+app.get('/protected', authMiddleware, (req, res) => {
+    res.sendStatus(200);
+});
 
