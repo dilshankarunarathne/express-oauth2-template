@@ -5,3 +5,8 @@ This is done through the terminal with the command `npm init -y`
 `npm install express mongoose jsonwebtoken bcryptjs`
 
 3. Set up a MongoDB connection using Mongoose
+
+```js
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/jwt_auth', { useNewUrlParser: true, useUnifiedTopology: true });
+```
