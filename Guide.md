@@ -82,4 +82,4 @@ const authMiddleware = (req, res, next) => {
 app.get('/protected', authMiddleware, (req, res) => {
     res.sendStatus(200);
 });
-
+```
