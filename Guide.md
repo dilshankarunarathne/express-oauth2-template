@@ -12,3 +12,10 @@ mongoose.connect(
     'mongodb://localhost/jwt_auth', { useNewUrlParser: true, useUnifiedTopology: true }
 );
 ```
+
+4. Create a User model with Mongoose
+const UserSchema = new mongoose.Schema({
+    username: String,
+    password: String,
+});
+const User = mongoose.model('User', UserSchema);
