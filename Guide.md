@@ -84,4 +84,8 @@ app.get('/protected', authMiddleware, (req, res) => {
 });
 ```
 
+11. Start the server
 
+```js
+app.listen(3000, () => console.log('Server running on port 3000'));
+```
