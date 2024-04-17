@@ -9,5 +9,6 @@ This is done through the terminal with the command `npm init -y`
 ```js
 const mongoose = require('mongoose');
 mongoose.connect(
-    'mongodb://localhost/jwt_auth', { useNewUrlParser: true, useUnifiedTopology: true });
+    'mongodb://localhost/jwt_auth', { useNewUrlParser: true, useUnifiedTopology: true }
+    );
 ```
