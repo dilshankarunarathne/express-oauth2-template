@@ -23,7 +23,7 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model('User', UserSchema);
 ```
 
-1. Set up Express.js server
+5. Set up Express.js server
 ```js
 const express = require('express');
 const app = express();
