@@ -14,6 +14,7 @@ mongoose.connect(
 ```
 
 4. Create a User model with Mongoose
+
 ```js
 const UserSchema = new mongoose.Schema({
     username: String,
@@ -22,7 +23,7 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model('User', UserSchema);
 ```
 
-5. Set up Express.js server
+1. Set up Express.js server
 ```js
 const express = require('express');
 const app = express();
