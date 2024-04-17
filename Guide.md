@@ -24,6 +24,7 @@ const User = mongoose.model('User', UserSchema);
 ```
 
 5. Set up Express.js server
+
 ```js
 const express = require('express');
 const app = express();
