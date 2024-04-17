@@ -32,6 +32,7 @@ app.use(express.json());
 ```
 
 6. Create a signup route
+
 const bcrypt = require('bcryptjs');
 app.post('/signup', async (req, res) => {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
